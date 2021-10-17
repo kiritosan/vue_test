@@ -2,15 +2,22 @@
 <html lang="">
   <head>
     <meta charset="utf-8">
+    <!-- 针对IE的特殊配置 最高渲染级别渲染页面 由于不支持IE8以下，所以没有实质意义-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 开启移动端的理想视口 -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 配置页签图标 由于容易引起路径问题 所以用BASE_URL代表public的路径-->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- 配置网页标题 -->
+    <!-- 使用webpack插件实现的 从package.json里找包名当作标签 -->
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <!-- 当浏览器不支持js时，noscript标签里的内容就会被渲染 -->
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <!-- 容器 -->
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
