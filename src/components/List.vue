@@ -1,6 +1,6 @@
 <template>
     <ul class="todo-main">
-        <Item v-for="todoObj in todos" :key="todoObj.id" :todo="todoObj"/>
+        <Item v-for="todoObj in $store.state.todos" :key="todoObj.id" :todo="todoObj"/>
     </ul>
 </template>
 
@@ -10,7 +10,7 @@
         name:'List',
         components:{Item},
         // todo 这里接收数据，但是还没传数据
-        props:['todos'],
+        // props:['todos'],
 
     }
 </script>

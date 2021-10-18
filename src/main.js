@@ -4,6 +4,15 @@
 import Vue from 'vue'
 // 引入App组件
 import App from './App.vue'
+// 引入store
+import store from './store'
+
+
+
+
+
+
+
 // 关闭生产提示
 Vue.config.productionTip = false
 
@@ -11,7 +20,7 @@ Vue.config.productionTip = false
 new Vue({
   // 功能：将app组件放入容器中 
   render: h => h(App),
-
+  store,
   // 这里没有使用components注册子组件 index.html里面也没有通过自闭合标签使用组件
   // 事件总线
   beforeCreate(){

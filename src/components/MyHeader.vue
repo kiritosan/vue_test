@@ -7,7 +7,7 @@
 <script>
     export default {
         name:'MyHeader',
-        props:[],
+        // props:[],
         methods:{
             add(e){
                 // 下个钩子把下面的数据吊上去
